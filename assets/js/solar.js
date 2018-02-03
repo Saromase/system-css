@@ -1,14 +1,14 @@
 var galaxy = [
     {
-        name : 'Sun',
+        name : 'Star-One',
         type : 'star',
-        size : 'x-large',
+        size : 'large',
         color : 'yellow',
         location : 0,
 
     },
     {
-        name : 'Mercury',
+        name : 'Planet-One',
         type : 'planet',
         size : 'small',
         color : 'grey',
@@ -16,21 +16,35 @@ var galaxy = [
 
     },
     {
-        name : 'Venus',
+        name : 'Planet-Two',
         type : 'planet',
-        size : 'medium',
+        size : 'small',
         color : 'orange',
         location : 2
     },
-
-
+    {
+        name : 'Planet-Three',
+        type : 'planet',
+        size : 'small',
+        color : 'red',
+        location : 3
+    },
+    {
+        name : 'Planet-Four',
+        type : 'planet',
+        size : 'small',
+        color : 'blue',
+        location : 4
+    },
 ];
 
 $(document).ready(function() {
     console.log(galaxy)
     for (var i = 0; i < galaxy.length; i++) {
-        var current = galaxy[i];
-        var toto = $('#galaxy').append('<div class="'+ current.type + ' ' + current.size+ ' ' + current.color + ' location-'+ current.location + '"></div>');
-        toto.addClass('tutu')
+        var systemObject = galaxy[i];
+        var div = $('<div></div>');
+        div.addClass(systemObject.type).addClass(systemObject.size).addClass(systemObject.size).addClass(systemObject.color).addClass('location-' + systemObject.location);
+        $('#galaxy').append(div);
+
     }
 });

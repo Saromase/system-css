@@ -1,5 +1,11 @@
 body {
-  background-color: #000; }
+  background-color: #000;
+  max-width: 1000px;
+  max-height: 800px; }
+
+#galaxy {
+  padding-left: 300px;
+  padding-bottom: 200px; }
 
 .planet {
   position: absolute;
@@ -12,6 +18,10 @@ body {
   border-radius: 50%;
   margin-top: 250px;
   margin-left: 250px; }
+
+.x-small {
+  width: 5px;
+  height: 5px; }
 
 .small {
   width: 20px;
@@ -44,6 +54,11 @@ body {
   background: -moz-linear-gradient(#CCC9A9, #8C8A75);
   background: linear-gradient(#CCC9A9, #8C8A75); }
 
+.red {
+  background: -webkit-linear-gradient(#CC2922, #400D0B);
+  background: -moz-linear-gradient(#CC2922, #400D0B);
+  background: linear-gradient(#CC2922, #400D0B); }
+
 .blue {
   background: -webkit-linear-gradient(#1E49CC, #091740);
   background: -moz-linear-gradient(#1E49CC, #091740);
@@ -56,6 +71,14 @@ body {
 .location-2 {
   -webkit-animation: ellipse-2 9s linear infinite;
   animation: ellipse-2 9s linear infinite; }
+
+.location-3 {
+  -webkit-animation: ellipse-3 15s linear infinite;
+  animation: ellipse-3 15s linear infinite; }
+
+.location-4 {
+  -webkit-animation: ellipse-4 22s linear infinite;
+  animation: ellipse-4 22s linear infinite; }
 
 @-webkit-keyframes ellipse-1 {
   from {
@@ -80,3 +103,27 @@ body {
     transform: rotate(0deg) translateY(-150px); }
   to {
     transform: rotate(360deg) translateY(-150px); } }
+
+@-webkit-keyframes ellipse-3 {
+  from {
+    -webkit-transform: rotate(0deg) translateY(-200px); }
+  to {
+    -webkit-transform: rotate(360deg) translateY(-200px); } }
+
+@keyframes ellipse-3 {
+  from {
+    transform: rotate(0deg) translateY(-200px); }
+  to {
+    transform: rotate(360deg) translateY(-200px); } }
+
+@-webkit-keyframes ellipse-4 {
+  from {
+    -webkit-transform: rotate(0deg) translateY(-250px); }
+  to {
+    -webkit-transform: rotate(360deg) translateY(-250px); } }
+
+@keyframes ellipse-4 {
+  from {
+    transform: rotate(0deg) translateY(-250px); }
+  to {
+    transform: rotate(360deg) translateY(-250px); } }
