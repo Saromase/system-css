@@ -1,0 +1,96 @@
+body {
+    background-color: black;
+}
+
+#galaxy
+{
+	background-image: url("fond_galaxy3.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	max-height: 600px;
+	max-width: 1200px;
+}
+
+#system
+{
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	padding-top: 240px;
+}
+
+
+#solar {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+	margin-top: 250px;
+	margin-left: 250px;
+
+    border-radius: 50%;
+    background: -webkit-linear-gradient(#ffde00, #ffc600);
+    background: -moz-linear-gradient(#ffde00, #ffc600);
+    background: linear-gradient(#ffde00, #ffc600);
+}
+
+
+#mercury {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    margin-top: 290px;
+	margin-left: 290px;
+
+    border-radius: 50%;
+    background: -webkit-linear-gradient(#7D838C, #393C40);
+    background: -moz-linear-gradient(#7D838C, #393C40);
+    background: linear-gradient(#7D838C, #393C40);
+
+    -webkit-animation: ellipse_mercure 5s linear infinite;
+    animation: ellipse_mercure 5s linear infinite;
+}
+
+#venus {
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+
+    margin-top: 290px;
+    margin-left: 290px;
+
+    border-radius: 50%;
+    background: -webkit-linear-gradient(#CCC9A9, #8C8A75);
+    background: -moz-linear-gradient(#CCC9A9, #8C8A75);
+    background: linear-gradient(#CCC9A9, #8C8A75);
+
+    -webkit-animation: ellipse_venus 9s linear infinite;
+    animation: ellipse_venus 9s linear infinite;
+}
+
+
+
+/* Animations pour les différents navigateurs */
+@-webkit-keyframes ellipse_mercure {
+from { -webkit-transform: rotate(0deg) translateY(-75px);}
+to { -webkit-transform: rotate(360deg) translateY(-75px);}
+}
+
+
+@keyframes ellipse_mercure {
+from { transform: rotate(0deg) translateY(-75px);}
+to { transform: rotate(360deg) translateY(-75px);}
+}
+
+@-webkit-keyframes ellipse_venus {
+from { -webkit-transform: rotate(0deg) translateY(-150px);}
+to { -webkit-transform: rotate(360deg) translateY(-150px);}
+}
+
+
+@keyframes ellipse_venus {
+from { transform: rotate(0deg) translateY(-150px);}
+to { transform: rotate(360deg) translateY(-150px);}
+}

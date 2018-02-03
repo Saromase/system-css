@@ -1,0 +1,108 @@
+body {
+    background-color: #000;
+}
+
+// Object Type (star / planet)
+.planet {
+    position: absolute;
+
+    border-radius: 50%;
+
+    margin-top: 290px;
+	margin-left: 290px;
+}
+
+.star {
+    position: absolute;
+
+    border-radius: 50%;
+
+    margin-top: 250px;
+	margin-left: 250px;
+}
+
+// Planet size (small / medium / large / x-large)
+.small {
+
+    width: 20px;
+    height: 20px;
+}
+
+.medium {
+    width: 40px;
+    height: 40px;
+}
+
+.large {
+    width: 60px;
+    height: 60px;
+}
+
+.x-large {
+    width: 100px;
+    height: 100px;
+
+}
+
+// Planet Color (yellow / grey / orange / blue / )
+
+.yellow {
+    background: -webkit-linear-gradient(#ffde00, #ffc600);
+    background: -moz-linear-gradient(#ffde00, #ffc600);
+    background: linear-gradient(#ffde00, #ffc600);
+}
+.grey {
+    background: -webkit-linear-gradient(#7D838C, #393C40);
+    background: -moz-linear-gradient(#7D838C, #393C40);
+    background: linear-gradient(#7D838C, #393C40);
+}
+
+.orange {
+    background: -webkit-linear-gradient(#CCC9A9, #8C8A75);
+    background: -moz-linear-gradient(#CCC9A9, #8C8A75);
+    background: linear-gradient(#CCC9A9, #8C8A75);
+}
+
+.blue {
+    background: -webkit-linear-gradient(#1E49CC, #091740);
+    background: -moz-linear-gradient(#1E49CC, #091740);
+    background: linear-gradient(#1E49CC, #091740);
+}
+
+// Planet Animation by Location
+
+.location-1 {
+    -webkit-animation: ellipse-1 5s linear infinite;
+    animation: ellipse-1 5s linear infinite;
+}
+
+.location-2 {
+    -webkit-animation: ellipse-2 9s linear infinite;
+    animation: ellipse-2 9s linear infinite;
+}
+
+
+
+// Animations pour les différents navigateurs
+
+@-webkit-keyframes ellipse-1 {
+from { -webkit-transform: rotate(0deg) translateY(-90px);}
+to { -webkit-transform: rotate(360deg) translateY(-90px);}
+}
+
+
+@keyframes ellipse-1 {
+from { transform: rotate(0deg) translateY(-90px);}
+to { transform: rotate(360deg) translateY(-90px);}
+}
+
+@-webkit-keyframes ellipse-2 {
+from { -webkit-transform: rotate(0deg) translateY(-150px);}
+to { -webkit-transform: rotate(360deg) translateY(-150px);}
+}
+
+
+@keyframes ellipse-2 {
+from { transform: rotate(0deg) translateY(-150px);}
+to { transform: rotate(360deg) translateY(-150px);}
+}
