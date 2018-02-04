@@ -2,7 +2,7 @@ var galaxy = [
     {
         name : 'Star-One',
         type : 'star',
-        size : 'large',
+        size : 'x-large',
         color : 'yellow',
         location : 0,
 
@@ -10,8 +10,8 @@ var galaxy = [
     {
         name : 'Planet-One',
         type : 'planet',
-        size : 'small',
-        color : 'grey',
+        size : 'x-small',
+        color : 'light-grey',
         location : 1
 
     },
@@ -19,7 +19,7 @@ var galaxy = [
         name : 'Planet-Two',
         type : 'planet',
         size : 'small',
-        color : 'orange',
+        color : 'grey',
         location : 2
     },
     {
@@ -32,9 +32,23 @@ var galaxy = [
     {
         name : 'Planet-Four',
         type : 'planet',
-        size : 'small',
+        size : 'medium',
         color : 'blue',
         location : 4
+    },
+    {
+        name : 'Planet-Five',
+        type : 'planet',
+        size : 'medium',
+        color : 'orange',
+        location : 5
+    },
+    {
+        name : 'Planet-Six',
+        type : 'planet',
+        size : 'large',
+        color : 'red',
+        location : 6
     },
 ];
 
@@ -45,6 +59,11 @@ $(document).ready(function() {
         var div = $('<div></div>');
         div.addClass(systemObject.type).addClass(systemObject.size).addClass(systemObject.size).addClass(systemObject.color).addClass('location-' + systemObject.location);
         $('#galaxy').append(div);
+        if (systemObject.location != 0){
+            var orbit = $('<div></div>');
+            orbit.addClass('orbit-'+ systemObject.location);
+        }
+        $('#galaxy').append(orbit);
 
     }
 });
